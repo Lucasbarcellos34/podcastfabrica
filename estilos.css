@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ffffff; /* Fundo branco para a página */
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff; /* Fundo branco para o calendário */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para o calendário */
+    padding: 20px; /* Espaçamento interno para o calendário */
+}
+
+/* Estilos do mês (ex: Outubro) */
+.fc-toolbar {
+    background-color: #004085; /* Azul escuro para a barra do mês */
+    color: white; /* Cor do texto na barra */
+    padding: 10px; /* Espaçamento interno da barra */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estiliza o nome do mês no calendário */
+.fc-toolbar-title {
+    text-transform: capitalize; /* Força a primeira letra de cada palavra a ser maiúscula */
+    font-size: 20px; /* Ajusta o tamanho da fonte, se necessário */
+    color: white; /* Cor azul que combine com sua paleta */
+}
+
+
+.fc-today-button {
+    color: white; /* Cor do texto "Hoje" para branco */
+    background-color: white; /* Fundo transparente */
+    border: none; /* Remove borda padrão do botão */
+}
+
+.fc-today-button:hover {
+    background-color: white; /* Cor ao passar o mouse (branco semitransparente) */
+}
+
+.fc-toolbar h2 {
+    margin: 0; /* Remove margem do título do mês */
+}
+
+.fc-today-button.fc-button-active {
+    color: white; /* Cor do texto "Hoje" para branco quando ativo */
+    background-color: white; /* Fundo transparente */
+    
+}
+
+/* Estilos dos dias do calendário */
+.fc-daygrid-day {
+    background-color: #f8f9fa; /* Fundo branco para os dias do calendário */
+    border: 1px solid #ddd; /* Borda dos dias */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.fc-daygrid-day:hover {
+    background-color: white; /* Cor ao passar o mouse (cinza claro) */
+}
+
+.fc-daygrid-day.fc-day-today {    /* Dia Atual Selecionado, vai para o modal */
+    background-color: #f8f9fa !important; /* Cor do dia atual  */
+    border: 1px solid #333; /* Borda mais escura para o dia atual */
+}
+
+.fc-day-today:hover {
+    background-color: white !important; /* Um tom mais escuro ao passar o mouse */
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com maior transparência */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Fundo do modal */
+    margin: 10% auto; /* Margens superiores e laterais */
+    padding: 20px;
+    border: 1px solid #ccc; /* Borda suave */
+    width: 80%; /* Largura do modal */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.close {
+    color: #333; /* Cor do botão de fechar */
+    float: right; /* Alinha o botão de fechar à direita */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: green; /* Cor do botão de fechar ao passar o mouse */
+    background-color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Cor do título */
+}
+
+/* Estilo para o formulário */
+form {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+}
+
+/* Estilos dos inputs, selects e textarea do formulário */
+input[type="text"],
+input[type="date"],
+textarea,
+select { /* Incluí o select para ter o mesmo estilo dos outros inputs */
+    width: 100%;
+    padding: 10px;
+    margin: 10px -10px; /* Mesma margem aplicada aos outros inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura */
+}
+
+/* Estilo específico para as caixas de seleção */
+select {
+    background-color: #ffffff; /* Fundo branco para as caixas de seleção */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilos do botão */
+button {
+    background-color: #ff5733; /* Cor do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green; /* Cor do botão ao passar o mouse */
+}
+
+
+
+
+
+
+
+/* Estilo para o Home*/
+.menu {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #004085; /* Cor de fundo azul do menu */
+    padding: 20px;
+}
+
+/* Estilo para os botões do menu */
+.menu-button {
+    background-color: #007bff; /* Cor azul dos botões */
+    color: white; /* Cor do texto dos botões */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px;
+    margin: 0 10px; /* Espaçamento entre os botões */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animação suave na mudança de cor */
+}
+
+.menu-button:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    text-align: center; /* Centraliza o texto dentro do main */
+    margin-top: 50px; /* Espaçamento superior para o conteúdo */
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px; /* Aumenta o espaçamento abaixo do h1 */
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilo para as imagens nos botões */
+.menu-button .icon {
+    width: 16px; /* Ajuste o tamanho da imagem conforme necessário (exemplo: 16px) */
+    height: 16px; /* Mantém a altura da imagem para ser igual */
+    margin-right: 8px; /* Espaço entre a imagem e o texto */
+    vertical-align: middle; /* Alinha a imagem verticalmente no meio do texto */
+}

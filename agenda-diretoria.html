@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Gravações</title>
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="estilos.css"> <!-- Vincula o arquivo CSS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/pt-br.js'></script> <!-- Vincula o arquivo de localidade -->
+    <script src="function.js" defer></script> <!-- Vincula o arquivo JavaScript -->
+</head>
+<body>
+
+    <h1><img src="calendario.png" alt="Ícone de Calendário" style="width: 40px; vertical-align: middle; margin-right: 10px;">Fábrica Podcast</h1>
+    <div id='calendar'></div>
+
+ <!-- Modal -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Informações da Gravação</h2>
+        <form id="infoForm">
+            
+            <label for="client">Cliente:</label>
+            <input type="text" id="client" required><br>
+
+            <label for="location">Local da Gravação:</label>
+            <select id="location" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="Interna">Interna</option>
+                <option value="Externa">Externa</option>
+            </select><br>
+
+            <label for="duration">Duração:</label>
+            <select id="duration" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="1h">1h</option>
+                <option value="2h">2h</option>
+                <option value="3h">3h</option>
+                <option value="4h">4h</option>
+                <option value="5h">5h</option>
+                <option value="6h">6h</option>
+                <option value="7h">7h</option>
+                <option value="8h">8h</option>
+                <option value="9h">9h</option>
+                <option value="10h">10h</option>
+            </select><br>
+
+            <label for="valor">Valor:</label>
+            <input type="text" id="valor" required><br>
+
+            <label for="observations">Observação:</label>
+            <textarea id="observations" required></textarea><br>
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" required><br>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>
